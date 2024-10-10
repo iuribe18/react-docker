@@ -11,6 +11,9 @@ jobs:
   test:
     environment: develop
     runs-on: ubuntu-latest
+    # Define our own container
+    container: 
+      image: node:16
     env:
       MONGODB_CONNECTION_PROTOCOL: mongodb+srv
       MONGODB_CLUSTER_ADDRESS: ${{ secrets.MONGODB_CLUSTER_ADDRESS }}
